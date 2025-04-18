@@ -5,8 +5,8 @@ import BackToHome from "../../components/BackToHome";
 export default function MuscuWeb() {
   return (
     <section className="min-h-screen py-16 px-6 bg-white">
-      <BackToHome />
       <div className="max-w-5xl mx-auto">
+        <BackToHome />
         <motion.h1 
           className="text-4xl font-bold mb-4"
           initial={{ opacity: 0, y: -20 }}
@@ -130,7 +130,7 @@ export default function MuscuWeb() {
 
           <div className="mt-6 flex gap-4">
             <a 
-              href="https://github.com/NicolasCHANTEUX/musculation-website" 
+              href="https://github.com/NicolasCHANTEUX/Site_Web_Musculation" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-block px-6 py-3 bg-gray-100 hover:bg-gray-200 border border-gray-300 rounded text-sm font-medium"

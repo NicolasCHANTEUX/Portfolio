@@ -5,8 +5,8 @@ import BackToHome from "../../components/BackToHome";
 export default function Psyche() {
   return (
     <section className="min-h-screen py-16 px-6 bg-white">
-      <BackToHome />
       <div className="max-w-5xl mx-auto">
+        <BackToHome />
         <motion.h1 
           className="text-4xl font-bold mb-4"
           initial={{ opacity: 0, y: -20 }}
