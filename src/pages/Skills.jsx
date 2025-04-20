@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { MotionDiv as motion } from "../utils/AnimationFallback";
 
 // Sample skills data - customize with your own skills
 const skillsData = {

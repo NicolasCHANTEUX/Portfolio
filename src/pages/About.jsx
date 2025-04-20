@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { MotionDiv as motion } from "../utils/AnimationFallback";
 
 export default function About() {
   return (

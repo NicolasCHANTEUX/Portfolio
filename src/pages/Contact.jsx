@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { MotionDiv as motion } from "../utils/AnimationFallback";
 import { useState } from "react";
 
 export default function Contact() {

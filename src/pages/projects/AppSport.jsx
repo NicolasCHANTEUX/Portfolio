@@ -1,5 +1,5 @@
 // src/pages/projects/AppSport.jsx
-import { motion } from "framer-motion";
+import { MotionDiv as motion } from "../../utils/AnimationFallback";
 import BackToHome from "../../components/BackToHome";
 
 export default function AppSport() {
