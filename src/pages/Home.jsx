@@ -1,5 +1,5 @@
 import React from "react";
-import { MotionDiv as motion } from "../utils/AnimationFallback";
+import { motion } from "framer-motion";
 
 export default function Home() {
   // Simplifié: pas de préchargement qui pourrait causer des erreurs
