@@ -23,7 +23,7 @@ export default function App() {
     document.title = "Nicolas Chanteux | Portfolio";
 
     // Scroll fluide pour les ancres (seulement sur la home)
-    if (location.pathname === "/") {
+    if (location.pathname === "/" || location.pathname === "/Portfolio/") {
       // Gérer les ancres d'URL directes
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
