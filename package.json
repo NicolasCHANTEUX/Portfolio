@@ -19,7 +19,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "node deploy.js"
+    "deploy": "node deploy.js",
+    "deploy-ghpages": "gh-pages -d build --no-history"
   },
   "eslintConfig": {
     "extends": [
@@ -41,9 +42,9 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
-    "fs-extra": "^11.3.0",
     "gh-pages": "^5.0.0",
     "postcss": "^8.4.31",
-    "tailwindcss": "^3.3.5"
+    "tailwindcss": "^3.3.5",
+    "fs-extra": "^11.0.0"
   }
 }

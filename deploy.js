@@ -1,9 +1,10 @@
 const { exec } = require('child_process');
 const path = require('path');
-const fs = require('fs');
+const fs = require('fs-extra');
 
-// Chemin vers le dossier build
+// Chemins
 const buildFolder = path.join(__dirname, 'build');
+const tempFolder = path.join(__dirname, 'temp_deploy');
 
 // Fonction pour exécuter des commandes shell
 const runCommand = (command) => {
@@ -34,41 +35,46 @@ const deploy = async () => {
       return;
     }
 
-    // Créer un dossier temporaire
-    const tempFolder = path.join(__dirname, 'temp_deploy');
+    // Nettoyer et créer un dossier temporaire
     if (fs.existsSync(tempFolder)) {
-      await runCommand(`rm -rf ${tempFolder}`);
+      fs.removeSync(tempFolder);
     }
     fs.mkdirSync(tempFolder);
 
     // Initialiser un nouveau repo git
     console.log('📦 Initialisation du repo temporaire...');
-    await runCommand(`cd ${tempFolder} && git init`);
+    await runCommand(`cd "${tempFolder}" && git init`);
 
-    // Copier les fichiers du build
+    // Copier les fichiers du build (utiliser fs-extra au lieu de cp)
     console.log('📂 Copie des fichiers...');
-    await runCommand(`cp -r ${buildFolder}/* ${tempFolder}/`);
+    fs.copySync(buildFolder, tempFolder);
     
     // Créer un fichier .nojekyll
     fs.writeFileSync(path.join(tempFolder, '.nojekyll'), '');
 
     // Configurer le repo et pousser vers GitHub
     console.log('🔄 Configuration du repo et push vers GitHub...');
-    await runCommand(`
-      cd ${tempFolder} && 
-      git add . && 
-      git commit -m "Déploiement du site" && 
-      git branch -M gh-pages && 
-      git remote add origin https://github.com/NicolasCHANTEUX/Portfolio.git && 
-      git push -f origin gh-pages
-    `);
-
+    await runCommand(`cd "${tempFolder}" && git add . && git commit -m "Déploiement du site"`);
+    await runCommand(`cd "${tempFolder}" && git branch -M gh-pages`);
+    await runCommand(`cd "${tempFolder}" && git remote add origin https://github.com/NicolasCHANTEUX/Portfolio.git`);
+    
+    // Essayer de pousser
+    try {
+      await runCommand(`cd "${tempFolder}" && git push -f origin gh-pages`);
+      console.log('✅ Déploiement terminé avec succès!');
+    } catch (pushError) {
+      console.log('⚠️ Erreur lors du push. Essai avec authentification...');
+      console.log('Veuillez vous connecter à votre compte GitHub quand demandé.');
+      await runCommand(`cd "${tempFolder}" && git push -f origin gh-pages`);
+      console.log('✅ Déploiement terminé avec succès!');
+    }
+    
+    console.log('🌐 Votre site est maintenant disponible à l\'adresse: https://nicolaschanteux.github.io/Portfolio/');
+    
     // Nettoyage
     console.log('🧹 Nettoyage...');
-    await runCommand(`rm -rf ${tempFolder}`);
+    fs.removeSync(tempFolder);
     
-    console.log('✅ Déploiement terminé avec succès!');
-    console.log('🌐 Votre site est maintenant disponible à l\'adresse: https://nicolaschanteux.github.io/Portfolio/');
   } catch (error) {
     console.error('❌ Erreur lors du déploiement:', error);
   }
