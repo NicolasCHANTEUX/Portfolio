@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { MotionDiv as motion } from "../utils/AnimationFallback";
 import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
