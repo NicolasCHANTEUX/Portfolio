@@ -27,7 +27,7 @@ export default function BdeInfo() {
         </motion.p>
 
         <motion.img 
-          src="/assets/site_bde/accueil.png"
+          src="./assets/site_bde/accueil.png"
           alt="Capture d'écran du site BDE"
           className="rounded-lg shadow mb-10 w-full object-cover"
           initial={{ opacity: 0 }}
@@ -39,20 +39,7 @@ export default function BdeInfo() {
           }}
         />
         <motion.img 
-          src="/assets/site_bde/boutique.png"
-          alt="Capture d'écran du site BDE"
-          className="rounded-lg shadow mb-10 w-full object-cover"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          onError={(e) => {
-            e.target.src = "https://via.placeholder.com/900x400?text=Image+non+trouvée";
-            e.target.onerror = null;
-          }}
-        />
-
-        <motion.img 
-          src="/assets/site_bde/connexion.png"
+          src="./assets/site_bde/boutique.png"
           alt="Capture d'écran du site BDE"
           className="rounded-lg shadow mb-10 w-full object-cover"
           initial={{ opacity: 0 }}
@@ -65,7 +52,20 @@ export default function BdeInfo() {
         />
 
         <motion.img 
-          src="/assets/site_bde/mon_compte.png"
+          src="./assets/site_bde/connexion.png"
+          alt="Capture d'écran du site BDE"
+          className="rounded-lg shadow mb-10 w-full object-cover"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          onError={(e) => {
+            e.target.src = "https://via.placeholder.com/900x400?text=Image+non+trouvée";
+            e.target.onerror = null;
+          }}
+        />
+
+        <motion.img 
+          src="./assets/site_bde/mon_compte.png"
           alt="Capture d'écran du site BDE"
           className="rounded-lg shadow mb-10 w-full object-cover"
           initial={{ opacity: 0 }}

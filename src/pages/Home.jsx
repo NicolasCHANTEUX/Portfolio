@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { MotionDiv as motion } from "../utils/AnimationFallback";
+import { preloadAllImages } from "../utils/imagePreloader";
 
 export default function Home() {
+  useEffect(() => {
+    // Précharger toutes les images dès le chargement de la page d'accueil
+    preloadAllImages();
+  }, []);
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-gray-100 px-4">
       <div className="max-w-4xl mx-auto text-center">
@@ -11,7 +17,7 @@ export default function Home() {
           transition={{ duration: 0.8 }}
         >
           <img 
-            src="/assets/profile.jpg" 
+            src="./assets/profile.jpg" 
             alt="Nicolas Chanteux"
             className="w-60 h-60 object-cover rounded-full mx-auto mb-6 border-4 border-white shadow-lg"
             onError={(e) => {

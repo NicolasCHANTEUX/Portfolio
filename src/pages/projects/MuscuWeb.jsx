@@ -27,7 +27,7 @@ export default function MuscuWeb() {
         </motion.p>
 
         <motion.img 
-          src="/assets/site_muscu/img_site_muscu.png"
+          src="./assets/site_muscu/img_site_muscu.png"
           alt="Capture d'écran du site web de musculation"
           className="rounded-lg shadow mb-10 w-full object-cover"
           initial={{ opacity: 0 }}

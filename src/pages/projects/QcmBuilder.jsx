@@ -27,7 +27,7 @@ export default function QcmBuilder() {
         </motion.p>
 
         <motion.img 
-          src="/assets/app_qcm_builder/img_app_qcm_builder.png"
+          src="./assets/app_qcm_builder/img_app_qcm_builder.png"
           alt="Capture d'écran de l'application QCM Builder"
           className="rounded-lg shadow mb-10 w-full object-cover"
           initial={{ opacity: 0 }}

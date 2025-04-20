@@ -11,8 +11,6 @@ import Contact from "./pages/Contact";
 import Psyche from "./pages/projects/Psyche";
 import QcmBuilder from "./pages/projects/QcmBuilder";
 import MuscuWeb from "./pages/projects/MuscuWeb";
-
-// Pages projets
 import BdeInfo from "./pages/projects/BdeInfo";
 import AppSport from "./pages/projects/AppSport";
 
@@ -23,7 +21,7 @@ export default function App() {
     document.title = "Nicolas Chanteux | Portfolio";
 
     // Scroll fluide pour les ancres (seulement sur la home)
-    if (location.pathname === "/" || location.pathname === "/Portfolio/") {
+    if (location.pathname === "/" || location.pathname === "") {
       // Gérer les ancres d'URL directes
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {

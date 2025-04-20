@@ -26,7 +26,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
           >
             <img 
-              src="/assets/profile.jpg" 
+              src="./assets/profile.jpg" 
               alt="Nicolas Chanteux"
               className="rounded-lg shadow-lg w-full"
               onError={(e) => {

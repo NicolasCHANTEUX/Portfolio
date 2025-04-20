@@ -9,7 +9,7 @@ const projectData = [
     title: "Site Web du BDE Info",
     description: "Développement d'un site web complet pour le Bureau des Étudiants – gestion d'événements, publications et interface d'administration.",
     tags: ["PHP", "SQL", "HTML/CSS", "JavaScript"],
-    image: "/assets/site_bde/img_site_bde.png",
+    image: "./assets/site_bde/img_site_bde.png",
     github: "https://github.com/NicolasCHANTEUX/SAE_4.01_site_BDE",
     demoLink: "",
     detailLink: "/projects/bde-info"
@@ -19,7 +19,7 @@ const projectData = [
     title: "Application Sportive",
     description: "Application Java pour le suivi d'entraînements sportifs, avec interface graphique et base de données PostgreSQL.",
     tags: ["Java", "JavaFX", "PostgreSQL"],
-    image: "/assets/app_muscu/img_app_muscu.png",
+    image: "./assets/app_muscu/img_app_muscu.png",
     github: "https://github.com/NicolasCHANTEUX/MusculationApp",
     demoLink: "",
     detailLink: "/projects/app-sport"
@@ -29,7 +29,7 @@ const projectData = [
     title: "L'âge de Psyché",
     description: "Virtualisation du jeu de société \"L'âge de Psyché\" avec une architecture MVC, une interface graphique Swing, et génération dynamique de la carte de jeu.",
     tags: ["Java", "Architecture MVC", "Travail en équipe"],
-    image: "/assets/age_psyché/img_app_age_psyche.png",
+    image: "./assets/age_psyché/img_app_age_psyche.png",
     github: "https://github.com/A1exPrdgc/SAE-2.01---application-final",
     demoLink: "",
     detailLink: "/projects/psyche"
@@ -39,7 +39,7 @@ const projectData = [
     title: "Application QCM Builder",
     description: "Application pour enseignants permettant de créer des évaluations interactives avec différents types de questions, générées en HTML/CSS/JS.",
     tags: ["Java", "Architecture MVC", "Travail en équipe"],
-    image: "/assets/app_qcm_builder/img_app_qcm_builder.png",
+    image: "./assets/app_qcm_builder/img_app_qcm_builder.png",
     github: "https://github.com/pierrecvn/QCMBuilder",
     demoLink: "",
     detailLink: "/projects/qcm-builder"
@@ -49,7 +49,7 @@ const projectData = [
     title: "Site Web Musculation",
     description: "Version web de l'application de suivi sportif avec gestion des utilisateurs, enregistrement des séances, et visualisation de la progression.",
     tags: ["PHP", "JavaScript", "SQL", "HTML/CSS"],
-    image: "/assets/site_muscu/img_site_muscu.png",
+    image: "./assets/site_muscu/img_site_muscu.png",
     github: "https://github.com/NicolasCHANTEUX/Site_Web_Musculation",
     demoLink: "",
     detailLink: "/projects/muscu-web"

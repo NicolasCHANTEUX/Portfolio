@@ -27,7 +27,7 @@ export default function Psyche() {
         </motion.p>
 
         <motion.img 
-          src="/assets/age_psyché/img_app_age_psyche.png"
+          src="./assets/age_psyché/img_app_age_psyche.png"
           alt="Capture d'écran du jeu L'âge de Psyché"
           className="rounded-lg shadow mb-10 w-full object-cover"
           initial={{ opacity: 0 }}

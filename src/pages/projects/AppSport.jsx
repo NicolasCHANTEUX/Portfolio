@@ -27,7 +27,7 @@ export default function AppSport() {
         </motion.p>
 
         <motion.img 
-          src="/assets/app_muscu/img_app_muscu.png"
+          src="./assets/app_muscu/img_app_muscu.png"
           alt="Capture d'écran de l'application sportive"
           className="rounded-lg shadow mb-10 w-full object-cover"
           initial={{ opacity: 0 }}
