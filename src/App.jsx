@@ -14,6 +14,17 @@ import MuscuWeb from "./pages/projects/MuscuWeb";
 import BdeInfo from "./pages/projects/BdeInfo";
 import AppSport from "./pages/projects/AppSport";
 
+// Composant HomePage pour éviter le nesting direct des composants dans Routes
+const HomePage = () => (
+  <>
+    <Home />
+    <Projects />
+    <Skills />
+    <About />
+    <Contact />
+  </>
+);
+
 export default function App() {
   const location = useLocation();
 
@@ -23,36 +34,31 @@ export default function App() {
     // Scroll fluide pour les ancres (seulement sur la home)
     if (location.pathname === "/" || location.pathname === "") {
       // Gérer les ancres d'URL directes
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const targetId = this.getAttribute("href");
-          const targetElement = document.querySelector(targetId);
+      const anchorLinks = document.querySelectorAll('a[href^="#"]');
+      
+      const handleClick = function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
 
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop - 80,
-              behavior: "smooth"
-            });
-          }
-        });
-      });
-
-      // Gérer la navigation depuis une autre page avec state
-      if (location.state && location.state.scrollTo) {
-        const section = location.state.scrollTo;
-        const targetElement = document.getElementById(section);
-        
         if (targetElement) {
-          // Petit délai pour s'assurer que la page est chargée
-          setTimeout(() => {
-            window.scrollTo({
-              top: targetElement.offsetTop - 80,
-              behavior: "smooth"
-            });
-          }, 100);
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: "smooth"
+          });
         }
-      }
+      };
+      
+      anchorLinks.forEach(anchor => {
+        anchor.addEventListener("click", handleClick);
+      });
+      
+      // Nettoyage pour éviter les memory leaks
+      return () => {
+        anchorLinks.forEach(anchor => {
+          anchor.removeEventListener("click", handleClick);
+        });
+      };
     }
   }, [location]);
 
@@ -61,19 +67,7 @@ export default function App() {
       <Navbar />
       <main>
         <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Home />
-                <Projects />
-                <Skills />
-                <About />
-                <Contact />
-              </>
-            }
-          />
-          {/* Pages de projets */}
+          <Route path="/" element={<HomePage />} />
           <Route path="/projects/bde-info" element={<BdeInfo />} />
           <Route path="/projects/app-sport" element={<AppSport />} />
           <Route path="/projects/psyche" element={<Psyche />} />

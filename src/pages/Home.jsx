@@ -1,13 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { MotionDiv as motion } from "../utils/AnimationFallback";
-import { preloadAllImages } from "../utils/imagePreloader";
 
 export default function Home() {
-  useEffect(() => {
-    // Précharger toutes les images dès le chargement de la page d'accueil
-    preloadAllImages();
-  }, []);
-
+  // Simplifié: pas de préchargement qui pourrait causer des erreurs
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-gray-100 px-4">
       <div className="max-w-4xl mx-auto text-center">
