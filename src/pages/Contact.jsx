@@ -176,7 +176,7 @@ export default function Contact() {
             <div className="space-y-4">
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full">
-                  📧
+                  <span role="img" aria-label="Email">📧</span>
                 </div>
                 <div>
                   <p className="font-medium">Email</p>
@@ -188,7 +188,7 @@ export default function Contact() {
               
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full">
-                  🌐
+                  <span role="img" aria-label="Site web">🌐</span>
                 </div>
                 <div>
                   <p className="font-medium">LinkedIn</p>
@@ -200,7 +200,7 @@ export default function Contact() {
               
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full">
-                  💻
+                  <span role="img" aria-label="Ordinateur">💻</span>
                 </div>
                 <div>
                   <p className="font-medium">GitHub</p>

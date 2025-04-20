@@ -119,7 +119,7 @@ export default function BdeInfo() {
               rel="noopener noreferrer"
               className="inline-block px-6 py-3 bg-gray-100 hover:bg-gray-200 border border-gray-300 rounded text-sm font-medium"
             >
-              🔗 Voir le code sur GitHub
+              <span role="img" aria-label="Lien">🔗</span> Voir le code sur GitHub
             </a>
             {/* Ajoute ici un lien vers la démo si dispo plus tard */}
           </div>

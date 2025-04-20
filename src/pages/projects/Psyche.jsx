@@ -125,13 +125,13 @@ export default function Psyche() {
               rel="noopener noreferrer"
               className="inline-block px-6 py-3 bg-gray-100 hover:bg-gray-200 border border-gray-300 rounded text-sm font-medium"
             >
-              🔗 Voir le code sur GitHub
+              <span role="img" aria-label="Lien">🔗</span> Voir le code sur GitHub
             </a>
             <button 
               onClick={() => alert("Téléchargement non disponible pour le moment")}
               className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded text-sm font-medium"
             >
-              📥 Télécharger le jeu
+              <span role="img" aria-label="Télécharger">📥</span> Télécharger le jeu
             </button>
           </div>
         </motion.div>

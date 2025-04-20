@@ -136,7 +136,7 @@ export default function MuscuWeb() {
               rel="noopener noreferrer"
               className="inline-block px-6 py-3 bg-gray-100 hover:bg-gray-200 border border-gray-300 rounded text-sm font-medium"
             >
-              🔗 Voir le code sur GitHub
+              <span role="img" aria-label="Lien">🔗</span> Voir le code sur GitHub
             </a>
             <a 
               href="https://app-dd5685c1-1c4d-45ea-9434-14a19ca254c3.cleverapps.io/" 
@@ -144,7 +144,7 @@ export default function MuscuWeb() {
               rel="noopener noreferrer"
               className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded text-sm font-medium"
             >
-              🌐 Visiter le site
+              <span role="img" aria-label="Site web">🌐</span> Visiter le site
             </a>
           </div>
         </motion.div>

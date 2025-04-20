@@ -55,25 +55,25 @@ export default function About() {
             <div className="grid grid-cols-2 gap-4">
               <div className="flex items-center gap-2">
                 <div className="w-10 h-10 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full">
-                  💻
+                  <span role="img" aria-label="Ordinateur">💻</span>
                 </div>
                 <span>Programmation</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-10 h-10 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full">
-                  🎮
+                  <span role="img" aria-label="Manette de jeu">🎮</span>
                 </div>
                 <span>Jeux vidéo</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-10 h-10 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full">
-                  📚
+                  <span role="img" aria-label="Livres">📚</span>
                 </div>
                 <span>Lecture</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-10 h-10 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full">
-                  🏃‍♂️
+                  <span role="img" aria-label="Coureur">🏃‍♂️</span>
                 </div>
                 <span>Sport</span>
               </div>
