@@ -1,3 +1,4 @@
+import React from "react";
 import { MotionDiv as motion } from "../utils/AnimationFallback";
 
 // Sample skills data - customize with your own skills

@@ -1,3 +1,4 @@
+import React from "react";
 import { MotionDiv as motion } from "../utils/AnimationFallback";
 
 export default function Home() {

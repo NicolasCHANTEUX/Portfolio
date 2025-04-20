@@ -1,4 +1,5 @@
 // src/pages/projects/Psyche.jsx
+import React from "react";
 import { MotionDiv as motion } from "../../utils/AnimationFallback";
 import BackToHome from "../../components/BackToHome";
 
